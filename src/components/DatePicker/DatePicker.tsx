@@ -91,7 +91,7 @@ const DatePicker: VibeComponent<DatePickerProps, HTMLElement> = forwardRef<HTMLD
     const renderDay = useCallback(
       (day: Moment) => {
         const weekNumber = firstDayOfWeek === 0 ? day.clone().add(1, "d").isoWeek() : day.isoWeek();
-        const labelRender = parseInt(day.format("D")) % 2 === 0 ? <Label id={day.format("YYYY-MM-DD")} text={"00:00:" + day.format('DD')} /> : <Label id={day.format("YYYY-MM-DD")} text="--" kind={LabelKind.LINE} />;
+        const labelRender = parseInt(day.format("D")) % 2 === 0 ? <Label id={day.format("YYYY-MM-DD")} text={"00:00:" + day.format('DD')} /> : <Label id={day.format("YYYY-MM-DD")} text="--:--:--" kind={LabelKind.LINE} />;
 
         return (
           <>
