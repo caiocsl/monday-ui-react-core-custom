@@ -15,7 +15,7 @@ import { getTestId } from "../../tests/test-ids-utils";
 import { ComponentDefaultTestId } from "../../tests/constants";
 import { NOOP } from "../../utils/function-utils";
 import styles from "./DatePicker.module.scss";
-import { Label } from "../Label"
+import Label from "../Label/Label"
 
 interface DatePickerProps extends VibeComponentProps {
   /** set the first day of the week to display */
@@ -93,7 +93,7 @@ const DatePicker: VibeComponent<DatePickerProps, HTMLElement> = forwardRef<HTMLD
         return (
           <>
             <span className={styles.calendarDayWeekNumber}>{weekNumber}</span> {day.format("D")}
-            <Label id={day.format("YYYY-MM-DD")} kind="line">teste01</Label>
+            <Label id={day.format("YYYY-MM-DD")} text="teste01" />
           </>
         );
       },

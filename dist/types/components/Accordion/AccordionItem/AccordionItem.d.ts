@@ -1,0 +1,29 @@
+import React from "react";
+import VibeComponentProps from "src/types/VibeComponentProps";
+import { ElementContent } from "../../../types/ElementContent";
+interface AccordionItemProps extends VibeComponentProps {
+    /**
+     * Header title
+     */
+    title?: ElementContent;
+    /**
+     * The value of the expandable section
+     */
+    children?: ElementContent;
+    /**
+     * The expand icon font size
+     */
+    iconSize?: number | string;
+    /**
+     * On click callback
+     */
+    onClick?: () => void;
+    open?: boolean;
+    onClickAccordionCallback?: () => void;
+    hideBorder?: boolean;
+    headerClassName?: string;
+    contentClassName?: string;
+    expandCollapseComponentClassName?: string;
+}
+declare const AccordionItem: React.FC<AccordionItemProps>;
+export default AccordionItem;
