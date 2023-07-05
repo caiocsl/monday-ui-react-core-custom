@@ -92,7 +92,7 @@ const DatePicker: VibeComponent<DatePickerProps, HTMLElement> = forwardRef<HTMLD
         const weekNumber = firstDayOfWeek === 0 ? day.clone().add(1, "d").isoWeek() : day.isoWeek();
         return (
           <>
-            <span className={styles.calendarDayWeekNumber}>{weekNumber}</span> {day.format("D")}
+            <span className={styles.calendarDayWeekNumber}>{weekNumber}</span> {day.format("D") + "<br>teste01"}
             <Label id={day.format("YYYY-MM-DD")} text="teste01" />
           </>
         );
