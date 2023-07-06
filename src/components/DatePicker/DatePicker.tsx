@@ -95,7 +95,7 @@ const DatePicker: VibeComponent<DatePickerProps, HTMLElement> = forwardRef<HTMLD
 
         return (
           <>
-            <span className={styles.calendarDayWeekNumber}>{weekNumber}</span> {day.format("DD")}
+            {day.format("DD")}
 
             {labelRender}
           </>
